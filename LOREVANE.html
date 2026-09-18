@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOREVANE | Stories Beyond Imagination</title>
+<link rel="icon" type="image/png" heref=ChatGPT Image Sep 18, 2026, 10_09_04 AM.png">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080812;
+    color: white;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 7%;
+
+    background: rgba(8,8,18,0.95);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    color: #a875ff;
+
+    filter: drop-shadow(0 0 10px rgba(168,117,255,0.6));
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a875ff;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 88vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(118,70,255,0.25),
+            transparent 40%
+        ),
+        linear-gradient(
+            180deg,
+            #0b0920,
+            #080812
+        );
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+
+    margin-bottom: 25px;
+
+    color: #a875ff;
+
+    filter: drop-shadow(
+        0 0 25px rgba(168,117,255,0.6)
+    );
+}
+
+.hero h1 {
+    font-size: clamp(45px,8vw,90px);
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            white,
+            #a875ff
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+    font-size: clamp(20px,4vw,32px);
+
+    color: #cfc7ff;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #bdbdc9;
+
+    font-size: 18px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: #8b5cf6;
+
+    color: white;
+}
+
+.primary-button:hover {
+    background: #a875ff;
+
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 1px solid #7654c9;
+
+    color: #cbb8ff;
+}
+
+.secondary-button:hover {
+    background: rgba(139,92,246,0.15);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+
+    color: #9999aa;
+
+    margin-bottom: 45px;
+}
+
+/* ================= STORIES ================= */
+
+.story-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(270px,1fr));
+
+    gap: 25px;
+}
+
+.story-card {
+    background: #11111e;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(139,92,246,0.6);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.3);
+}
+
+.story-card h3 {
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    color: #a8a8b6;
+}
+
+.story-status {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(139,92,246,0.15);
+
+    color: #b99aff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+/* ================= FEATURED STORY ================= */
+
+.featured {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(75,45,150,0.2),
+            rgba(10,10,20,0.5)
+        );
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    border:
+        1px solid rgba(139,92,246,0.25);
+}
+
+.featured h2 {
+    font-size:
+        clamp(35px,5vw,55px);
+
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #a875ff;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.featured p {
+    color: #c2c2cc;
+
+    max-width: 850px;
+}
+
+.info-row {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+.info-box {
+    background: #151522;
+
+    border-radius: 12px;
+
+    padding: 12px 18px;
+
+    color: #ccccd5;
+}
+
+/* ================= CHAPTERS ================= */
+
+.chapter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 20px;
+}
+
+.chapter {
+    background: #11111e;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    border:
+        1px solid rgba(255,255,255,0.07);
+
+    transition: 0.3s;
+}
+
+.chapter:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(139,92,246,0.5);
+}
+
+.chapter-number {
+    color: #9b6cff;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+}
+
+.chapter h3 {
+    margin: 8px 0;
+
+    font-size: 23px;
+}
+
+.chapter-date {
+    display: block;
+
+    color: #8f8f9e;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.chapter p {
+    color: #9d9dab;
+
+    margin-bottom: 20px;
+}
+
+.read-button {
+    color: #b998ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.read-button:hover {
+    text-decoration: underline;
+}
+
+/* ================= COMING SOON ================= */
+
+.coming-soon {
+    max-width: 750px;
+
+    margin: 40px auto 0;
+
+    padding: 28px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(139,92,246,0.12),
+            rgba(20,20,35,0.7)
+        );
+
+    border:
+        1px solid rgba(139,92,246,0.3);
+
+    border-radius: 20px;
+}
+
+.coming-soon h3 {
+    color: #b998ff;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.coming-soon p {
+    color: #aaaaba;
+
+    font-size: 16px;
+}
+
+/* ================= SUMMARY ================= */
+
+.summary {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.summary p {
+    color: #b8b8c5;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+/* ================= GENRES ================= */
+
+.genres {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.genre {
+    padding: 10px 18px;
+
+    background: #151522;
+
+    border:
+        1px solid rgba(139,92,246,0.25);
+
+    border-radius: 30px;
+
+    color: #cbb8ff;
+}
+
+/* ================= WHY READ ================= */
+
+.reason-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 20px;
+}
+
+.reason {
+    padding: 30px;
+
+    background: #11111e;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+}
+
+.reason-icon {
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+.reason h3 {
+    margin-bottom: 8px;
+}
+
+.reason p {
+    color: #9999aa;
+}
+
+/* ================= AMAZON ================= */
+
+.amazon {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(139,92,246,0.18),
+            transparent 60%
+        );
+}
+
+.amazon p {
+    color: #aaaaba;
+
+    max-width: 650px;
+
+    margin:
+        0 auto 25px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: #05050b;
+
+    border-top:
+        1px solid rgba(255,255,255,0.07);
+
+    color: #777785;
+}
+
+footer strong {
+    color: #a875ff;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px) {
+
+    header {
+        padding: 12px 5%;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    nav {
+        gap: 15px;
+
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .featured {
+        padding: 28px 20px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+        <!-- LOREVANE LOGO -->
+        <div class="logo">
+
+        <svg  
+   
+    class="logo-icon"
+    width="100"
+    height="100"
+    viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg"
+    style="display:block !important;">
+            class="logo-icon"
+            viewBox="0 0 100 100"
+           xmlns="http://www.w3.org/2000/svg"
+style="color:#b56cff; width:55px; height:55px; display:block;">
+            <!-- Magical portal -->
+
+            <circle
+                cx="50"
+                cy="50"
+                r="34"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="6"/>
+
+            <!-- Inner portal -->
+
+            <ellipse
+                cx="50"
+                cy="50"
+                rx="16"
+                ry="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"/>
+
+            <!-- Star -->
+
+            <path
+                d="
+                M50 7
+                L54 19
+                L67 23
+                L54 27
+                L50 40
+                L46 27
+                L33 23
+                L46 19
+                Z"
+                fill="currentColor"/>
+
+            <!-- Magic sparks -->
+
+            <circle
+                cx="18"
+                cy="38"
+                r="3"
+                fill="currentColor"/>
+
+            <circle
+                cx="82"
+                cy="62"
+                r="3"
+                fill="currentColor"/>
+
+        </svg>
+
+        <span>LOREVANE</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#stories">Stories</a>
+
+        <a href="#chapters">Chapters</a>
+
+        <a href="#about">About</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+
+        <!-- HERO LOGO -->
+
+        <svg
+            class="hero-logo"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <circle
+                cx="50"
+                cy="50"
+                r="34"
+                fill="none"
+                stroke="currentColor "
+                stroke-width="6"/>
+
+            <ellipse
+                cx="50"
+                cy="50"
+                rx="16"
+                ry="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"/>
+
+            <path
+                d="
+                M50 7
+                L54 19
+                L67 23
+                L54 27
+                L50 40
+                L46 27
+                L33 23
+                L46 19
+                Z"
+                fill="currentColor"/>
+
+            <circle
+                cx="18"
+                cy="38"
+                r="3"
+                fill="currentColor"/>
+
+            <circle
+                cx="82"
+                cy="62"
+                r="3"
+                fill="currentColor"/>
+
+        </svg>
+
+
+        <h1>LOREVANE</h1>
+
+        <h2>Stories Beyond Imagination</h2>
+
+        <p>
+            Welcome to Lorevane, a place where stories open
+            portals to new worlds, powerful characters,
+            mysterious adventures, and unforgettable journeys.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#stories"
+                class="button primary-button">
+
+                Explore Stories
+
+            </a>
+
+
+            <a
+                href="#chapters"
+                class="button secondary-button">
+
+                Read Chapters
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STORIES ================= -->
+
+<section id="stories">
+
+    <h2 class="section-title">
+        My Stories
+    </h2>
+
+    <p class="section-subtitle">
+        Discover the worlds currently being released in Lorevane.
+    </p>
+
+
+    <div class="story-grid">
+
+
+        <!-- THE FATE -->
+
+        <div class="story-card">
+
+            <span class="story-status">
+                CURRENTLY RELEASED
+            </span>
+
+            <h3>
+                The Fate
+            </h3>
+
+            <p>
+                Enter the world of Ender, where Entels and
+                Emmers stand on opposite sides of an ancient
+                conflict. Magic, friendship, danger, and
+                destiny collide.
+            </p>
+
+            <br>
+
+            <a
+                href="https://www.amazon.com/stores/Milan-Daniel-Alex/author/B0H5D84FML?ref=ap_rdr&shoppingPortalEnabled=true&ccs_id=98c38ea0-fd35-4c75-aba5-471e99e38048"
+                class="button primary-button">
+
+                 Know The Author
+
+            </a>
+
+        </div>
+
+
+        <!-- FUTURE STORY -->
+
+        <div class="story-card">
+
+            <span class="story-status">
+                COMING SOON
+            </span>
+
+            <h3>
+                Future Story
+            </h3>
+
+            <p>
+                A new adventure will appear here in the future.
+                Lorevane will continue growing with new worlds
+                and stories.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= THE FATE ================= -->
+
+<section id="the-fate">
+
+    <div class="featured">
+
+        <div class="story-status">
+            FEATURED STORY
+        </div>
+
+        <h2>
+            The Fate
+        </h2>
+
+        <div class="tagline">
+            A world where magic decides destiny.
+        </div>
+
+
+        <p>
+            The Fate takes place in the mysterious world of Ender.
+            The Entels fight to protect their world while the
+            Emmers seek power and control.
+
+            At the center of the story is Zayden, a young hero
+            whose journey becomes connected to powerful magic,
+            dangerous enemies, mysterious abilities, and a destiny
+            larger than he imagined.
+        </p>
+
+
+        <div class="info-row">
+
+            <div class="info-box">
+                📚 Chapters Released:
+                <strong>2</strong>
+            </div>
+
+            <div class="info-box">
+                ✍️ Author:
+                <strong>Milan Daniel Alex</strong>
+            </div>
+
+        </div>
+
+
+        <a
+            href="https://www.amazon.in/Kindle-eReader-Store/b?ie=UTF8&node=9840097031"
+            target="_blank"
+            class="button primary-button">
+
+            Search on Amazon Kindle or scroll down to get the chapter directly!
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CHAPTERS ================= -->
+
+<section id="chapters">
+
+    <h2 class="section-title">
+        Released Chapters
+    </h2>
+
+    <p class="section-subtitle">
+        The Fate currently has two released chapters.
+    </p>
+
+
+    <div class="chapter-grid">
+
+
+        <!-- CHAPTER 1 -->
+
+        <div class="chapter">
+
+            <span class="chapter-number">
+                Chapter 01
+            </span>
+
+            <h3>
+               The Fate Chapter-1: The Bond 
+            </h3>
+
+            <span class="chapter-date">
+                📅 Released: May 31, 2026
+            </span>
+
+            <p>
+                Begin the journey into the world of Ender
+                and discover where the story begins.
+            </p>
+
+            <a
+                href="https://www.amazon.in/Fate-Chapter-1-bond-ebook/dp/B0GX2X2GK7/ref=sr_1_3?dib=eyJ2IjoiMSJ9.q1ZM16DwzBfadEYwCHvxNhCbW3pg77qetqtrP8m3K1DebOCqEmS9OaG-hA-SCvWtYUb-do_Ly4_cFLFZZOyGIrWVJAo6sZSQcYnReUVds4e9e3TlVGaunpC7Gvr-KlA4xdA2A9fIcYwEqJl9MA7FY1-hEPgTgw9rl-Fa4mEBfS0YOt-oHTIRCILUCYTQBzMnzhtudSdZt64hsFq_Yj4nXTbFXACxp9BNEvaD0kRlxDNExcXnSpH0KravPUxRlsHAyAjZdGrwHx_COfM_QMws5nz_-dpYUMTBVX51XQk1Us0.Z-xyeCsvlRhIqsEx6ckpsRdKLc64KXLbCkYYHZ_167Q&dib_tag=se&keywords=the+fate+chapter+1&qid=1789658309&s=amazon-devices&sr=8-3"
+                target="_blank"
+                class="read-button">
+
+                Read Chapter 1 →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- CHAPTER 2 -->
+
+        <div class="chapter">
+
+            <span class="chapter-number">
+                Chapter 02
+            </span>
+
+            <h3>
+                The Fate Chapter-2: The Vice-Captain
+            </h3>
+
+            <span class="chapter-date">
+                📅 Released: July 23, 2026
+            </span>
+
+            <p>
+                Continue the adventure as the world
+                begins to reveal more of its secrets.
+            </p>
+
+            <a
+                href="https://www.amazon.in/Fate-Chapter-Milan-Daniel-Alex-ebook/dp/B0HB4R13Q5/ref=sr_1_1?crid=3RAKRAQWT6LB9&dib=eyJ2IjoiMSJ9.aBBxWyo_fV5z4ATsMYGHdWFK0yjPwqbG-_hONWAx_I0gr0OUeJSoK0v1ir_C9MH39HjaFhrKtOYvLhvZH3qnYnCMJsUuTnIFSLu79dYPwsf22NcdnhS57MmiZ8BOtsXu_mdc4puTb_Rc_PBim8SFCUwDZSnavasTl-I2zsXTtmIXAlz9zla7duB2VvSsi25tHfHcHMPe84sWUg6EKWMGrr0bJr3apAjMy5Yn0nxu-WI.ibcdi4TTl1mFk8nwa6pYcQXQIvleiaEiLFeehU7_ddY&dib_tag=se&keywords=the+fate+chapter+2&qid=1789658982&sprefix=the+fate+chapter+1%2Caps%2C604&sr=8-1"
+                target="_blank"
+                class="read-button">
+
+                Read Chapter 2 →
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MORE CHAPTERS -->
+
+    <div class="coming-soon">
+
+        <h3>
+            More Chapters Coming Soon
+        </h3>
+
+        <p>
+            More chapters coming soon. We will let you know
+            the release date of the upcoming stories.
+            So, stay tuned! ✨
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <h2 class="section-title">
+        About The Fate
+    </h2>
+
+
+    <div class="summary">
+
+        <p>
+            In the world of Ender, two opposing forces shape
+            the future of the realm: the Entels and the Emmers.
+        </p>
+
+        <p>
+            Zayden discovers extraordinary abilities and becomes
+            connected to a much larger conflict. Along the way,
+            friendships, enemies, magic, mysterious powers,
+            and unexpected discoveries begin changing his path.
+        </p>
+
+        <p>
+            The journey is only beginning.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GENRES ================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Genres
+    </h2>
+
+    <p class="section-subtitle">
+        A fantasy adventure filled with magic and action.
+    </p>
+
+
+    <div class="genres">
+
+        <span class="genre">Fantasy</span>
+
+        <span class="genre">Adventure</span>
+
+        <span class="genre">Action</span>
+
+        <span class="genre">Magic</span>
+
+        <span class="genre">Young Adult</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= WHY READ ================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Why Read The Fate?
+    </h2>
+
+    <p class="section-subtitle">
+        Step into a world where every discovery can change everything.
+    </p>
+
+
+    <div class="reason-grid">
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                ✨
+            </div>
+
+            <h3>
+                Powerful Magic
+            </h3>
+
+            <p>
+                Explore unique abilities and mysterious powers.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                🌌
+            </div>
+
+            <h3>
+                A New World
+            </h3>
+
+            <p>
+                Discover the strange and fascinating world of Ender.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                ⚔️
+            </div>
+
+            <h3>
+                Adventure
+            </h3>
+
+            <p>
+                Follow characters through danger, conflict,
+                and unexpected discoveries.
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                🧙
+            </div>
+
+            <h3>
+                Memorable Characters
+            </h3>
+
+            <p>
+                Meet heroes, friends, rivals, and mysterious figures.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AMAZON ================= -->
+
+<section class="amazon">
+
+    <h2 class="section-title">
+        Read The Fate
+    </h2>
+
+    <p>
+        The Fate is available on Amazon Kindle.
+        Follow the story and discover what happens next.
+    </p>
+
+
+    <a
+        href="https://sites.google.com/view/lorevane-journal/home"
+        target="_blank"
+        class="button primary-button">
+
+        📖 See the Journel.
+
+    </a>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>LOREVANE</strong>
+    </p>
+
+    <p>
+        Created by Milan Daniel Alex
+    </p>
+
+</footer>
+
+
+</body>
+</html>
